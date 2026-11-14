@@ -3,7 +3,7 @@ export const DEFAULT_DATA = {
   info: {
     name: "Sandro Lecca",
     location: "Uta, Cagliari",
-    whatsapp: "+39 347 123 4567",
+    whatsapp: "+39 347 320 8852",
     zone: "Campidano, Sardegna",
     banner: "🍅 Stagione in corso — disponibile fino a novembre!",
     bannerActive: true,
