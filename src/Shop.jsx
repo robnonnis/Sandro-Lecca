@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { loadData } from "./data.js";
 
-// Foto Unsplash via CDN (libere da copyright)
+// Foto reali di Sandro Lecca
 const PRODUCT_PHOTOS = {
-  cdb: "https://images.unsplash.com/photo-1587394987765-5b4b5c0ad83e?w=600&q=80&fit=crop",
-  dat: "https://images.unsplash.com/photo-1546094096-0df4bcaaa337?w=600&q=80&fit=crop",
-  cri: "https://images.unsplash.com/photo-1592841200221-a6898f307baa?w=600&q=80&fit=crop",
+  cdb: "/cuore-di-bue.jpg",
+  dat: "/datterino.jpg",
+  cri: "/crispino.jpg",
 };
 
 const PICKUP_POINTS = [
