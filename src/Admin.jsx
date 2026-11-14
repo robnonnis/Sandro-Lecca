@@ -6,11 +6,11 @@ const ADMIN_PASSWORD = "sandro2024"; // cambia con password sicura
 function Field({ label, value, onChange, type = "text", textarea = false }) {
   const style = {
     width: "100%",
-    background: "rgba(255,255,255,0.07)",
-    border: "1px solid rgba(255,255,255,0.12)",
+    background: "#fff",
+    border: "1.5px solid #E8E0D5",
     borderRadius: 10,
     padding: "10px 14px",
-    color: "#fff",
+    color: "#1A1208",
     fontSize: 14,
     fontFamily: "inherit",
     marginTop: 6,
@@ -18,7 +18,7 @@ function Field({ label, value, onChange, type = "text", textarea = false }) {
   };
   return (
     <div style={{ marginBottom: 14 }}>
-      <label style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.8px" }}>
+      <label style={{ fontSize: 12, color: "#A8977E", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.8px" }}>
         {label}
       </label>
       {textarea
@@ -32,13 +32,14 @@ function Field({ label, value, onChange, type = "text", textarea = false }) {
 function Section({ title, children }) {
   return (
     <div style={{
-      background: "rgba(255,255,255,0.04)",
-      border: "1px solid rgba(255,255,255,0.08)",
+      background: "#fff",
+      border: "1.5px solid #E8E0D5",
       borderRadius: 16,
       padding: "20px",
       marginBottom: 16,
+      boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
     }}>
-      <div style={{ fontSize: 13, fontWeight: 700, color: "#FFD580", textTransform: "uppercase", letterSpacing: "1px", marginBottom: 16 }}>
+      <div style={{ fontSize: 13, fontWeight: 700, color: "#6B5B45", textTransform: "uppercase", letterSpacing: "1px", marginBottom: 16 }}>
         {title}
       </div>
       {children}
@@ -63,7 +64,7 @@ function Login({ onLogin }) {
   return (
     <div style={{
       minHeight: "100vh",
-      background: "linear-gradient(160deg, #120600 0%, #2a1000 50%, #120500 100%)",
+      background: "#F7F3EE",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
@@ -71,10 +72,10 @@ function Login({ onLogin }) {
     }}>
       <div style={{ width: "100%", maxWidth: 340, textAlign: "center" }}>
         <div style={{ fontSize: 48, marginBottom: 16 }}>🍅</div>
-        <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 24, color: "#FFD580", marginBottom: 4 }}>
+        <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 24, color: "#1A1208", marginBottom: 4 }}>
           Sandro Lecca
         </div>
-        <div style={{ fontSize: 12, color: "rgba(255,255,255,0.4)", marginBottom: 32 }}>Pannello Amministratore</div>
+        <div style={{ fontSize: 12, color: "#A8977E", marginBottom: 32 }}>Pannello Amministratore</div>
         <form onSubmit={handleSubmit}>
           <input
             type="password"
@@ -84,11 +85,11 @@ function Login({ onLogin }) {
             autoFocus
             style={{
               width: "100%",
-              background: error ? "rgba(255,80,80,0.1)" : "rgba(255,255,255,0.08)",
-              border: `1px solid ${error ? "rgba(255,80,80,0.5)" : "rgba(255,255,255,0.15)"}`,
+              background: error ? "#FAEAE9" : "#fff",
+              border: `1.5px solid ${error ? "#C8352A" : "#E8E0D5"}`,
               borderRadius: 12,
               padding: "13px 16px",
-              color: "#fff",
+              color: "#1A1208",
               fontSize: 16,
               fontFamily: "inherit",
               outline: "none",
@@ -100,7 +101,7 @@ function Login({ onLogin }) {
           />
           <button type="submit" style={{
             width: "100%",
-            background: "linear-gradient(135deg, #FF6B35, #c94420)",
+            background: "#C8352A",
             border: "none",
             borderRadius: 12,
             padding: 13,
@@ -111,7 +112,7 @@ function Login({ onLogin }) {
           }}>
             Accedi
           </button>
-          {error && <div style={{ color: "#FF9999", fontSize: 13, marginTop: 10 }}>Password errata</div>}
+          {error && <div style={{ color: "#C8352A", fontSize: 13, marginTop: 10 }}>Password errata</div>}
         </form>
       </div>
     </div>
@@ -164,26 +165,27 @@ export default function Admin() {
   return (
     <div style={{
       minHeight: "100vh",
-      background: "linear-gradient(160deg, #120600 0%, #2a1000 50%, #120500 100%)",
-      color: "#fff",
+      background: "#F7F3EE",
+      color: "#1A1208",
       fontFamily: "'Inter', sans-serif",
       padding: "24px 16px 60px",
     }}>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&display=swap');
         * { box-sizing: border-box; }
-        input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.25); }
-        input:focus, textarea:focus { border-color: rgba(255,107,53,0.5) !important; }
+        input::placeholder, textarea::placeholder { color: #A8977E; }
+        input:focus, textarea:focus { border-color: #C8352A !important; outline: none; }
+        body { background: #F7F3EE; }
       `}</style>
 
       <div style={{ maxWidth: 480, margin: "0 auto" }}>
         {/* HEADER */}
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 24 }}>
           <div>
-            <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 22, color: "#FFD580" }}>Pannello Admin</div>
-            <div style={{ fontSize: 12, color: "rgba(255,255,255,0.35)" }}>Sandro Lecca</div>
+            <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 22, color: "#1A1208" }}>Pannello Admin</div>
+            <div style={{ fontSize: 12, color: "#A8977E" }}>Sandro Lecca</div>
           </div>
-          <a href="/" style={{ fontSize: 12, color: "rgba(255,255,255,0.4)", textDecoration: "none" }}>← Vedi negozio</a>
+          <a href="/" style={{ fontSize: 12, color: "#A8977E", textDecoration: "none" }}>← Vedi negozio</a>
         </div>
 
         {/* BANNER */}
@@ -217,7 +219,7 @@ export default function Admin() {
               paddingBottom: 16,
               marginBottom: 16,
             }}>
-              <div style={{ fontSize: 14, fontWeight: 700, color: "#FFD580", marginBottom: 10 }}>
+              <div style={{ fontSize: 14, fontWeight: 700, color: "#1A1208", marginBottom: 10 }}>
                 {p.emoji} {p.name}
               </div>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
@@ -283,7 +285,7 @@ export default function Admin() {
           onClick={handleSave}
           style={{
             width: "100%",
-            background: saved ? "linear-gradient(135deg, #25D366, #1da855)" : "linear-gradient(135deg, #FF6B35, #c94420)",
+            background: saved ? "#2A7A3B" : "#C8352A",
             border: "none",
             borderRadius: 14,
             padding: "15px",
@@ -293,6 +295,7 @@ export default function Admin() {
             cursor: "pointer",
             marginBottom: 10,
             transition: "background 0.3s",
+            boxShadow: "0 4px 16px rgba(200,53,42,0.25)",
           }}
         >
           {saved ? "✓ Salvato!" : "Salva modifiche"}
@@ -302,10 +305,10 @@ export default function Admin() {
           style={{
             width: "100%",
             background: "transparent",
-            border: "1px solid rgba(255,255,255,0.1)",
+            border: "1.5px solid #E8E0D5",
             borderRadius: 14,
             padding: "12px",
-            color: "rgba(255,255,255,0.3)",
+            color: "#A8977E",
             fontSize: 13,
             cursor: "pointer",
           }}
